@@ -1,0 +1,14 @@
+server:
+  port: 28090
+spring:
+  mvc:
+    view:
+      prefix: /WEB-INF/jsp/
+      suffix: .jsp
+custom:
+  config:
+    dagentparentpath: /home/alipms/
+
+    cmd3path: /home/alipms/cmdsh3
+  logging:
+    config: classpath:logback-spring.xml
