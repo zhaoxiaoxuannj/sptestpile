@@ -269,6 +269,7 @@ var app=new Vue({
                    'Authorization': this.token
                }
            };
+           var that=this;
            $.ajax({
                type: 'POST',
                url: 'detectbatchsubmit',
@@ -279,7 +280,8 @@ var app=new Vue({
                contentType: false,
                success:function(msginfo)
                {
-                   this.$message(msginfo);
+                   that.resetFileList();
+                   that.$message(msginfo);
                }
            });
            },
