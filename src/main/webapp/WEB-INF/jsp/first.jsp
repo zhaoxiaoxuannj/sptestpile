@@ -281,6 +281,7 @@ var app=new Vue({
                success:function(msginfo)
                {
                    that.resetFileList();
+                   
                    that.$message(msginfo);
                }
            });
