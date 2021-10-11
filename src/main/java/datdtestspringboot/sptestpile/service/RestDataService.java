@@ -136,7 +136,7 @@ public class RestDataService {
 		String detectinfo="detect "+detecttypestr+" "+sourceip+" "+domain+" "+destip;
 		try {
 			String resultinfo = CommonUtil.executeCmdBackString(cmd3path, "0.0.0.0", "15100","2", detectinfo);
-			return resultinfo;
+			return processDetectResultInfo(resultinfo);
 		}catch (Exception e)
 		{
 			logger.error(e.getMessage());
@@ -183,4 +183,35 @@ public class RestDataService {
 			return "检测失败";
 		}
 	}
+	private String processDetectResultInfo(String originalInfo){
+         String resultInfo=originalInfo;
+	     String[] infoArray=originalInfo.split("\r\n");
+            if(infoArray[0].startsWith("risk is")){
+                String riskInfo=infoArray[0].split(":")[1].trim();
+                if(riskInfo.endsWith("0"))
+                {
+                    resultInfo= "正常域名";
+                }
+                else{
+                    String risktype=infoArray[1].split(":")[1].trim();
+                    if(risktype.equals("11308"))
+                    {
+                        resultInfo="DGA域名";
+                    }
+                    else if(risktype.equals("11319")){
+                        resultInfo="fast flux域名";
+                    }
+                    else if (risktype.equals("11317")){
+                        resultInfo="DNS隐蔽隧道域名";
+                    }
+                    else{
+                        resultInfo="未知";
+                    }
+                }
+            }
+            else{
+                 resultInfo="未知";
+            }
+            return resultInfo;
+    }
 }
