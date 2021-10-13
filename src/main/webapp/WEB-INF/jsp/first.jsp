@@ -156,9 +156,9 @@ var app=new Vue({
             serverip:"161.189.162.66",
             serverport:"25000",
             reporttype:"1",
-            madulmflag:"1",
-            contentflag:"0",
-            cachettl:"5",
+            madulmflag:"0",
+            contentflag:"1",
+            cachettl:"1",
             rentid:"",
         },
         detectform:{
