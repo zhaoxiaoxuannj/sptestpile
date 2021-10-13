@@ -150,7 +150,7 @@ var app=new Vue({
         fileList:[],
         addFileName:"",
         showflag:"single",
-        configflag:"config",
+        configflag:"detect",
         detectresult:"",
         clientform:{
             serverip:"161.189.162.66",
