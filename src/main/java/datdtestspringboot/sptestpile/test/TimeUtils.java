@@ -1,15 +1,9 @@
-package com.ais.cs.datd.mgr.wapi.utils;
+package datdtestspringboot.sptestpile.test;
 
-import org.apache.commons.lang3.StringUtils;
+import org.junit.Test;
 
-import java.text.DateFormat;
-import java.text.ParseException;
 import java.text.SimpleDateFormat;
-import java.time.Instant;
-import java.time.LocalDate;
-import java.time.LocalDateTime;
-import java.time.Period;
-import java.time.ZoneId;
+import java.time.*;
 import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.Calendar;
@@ -138,20 +132,14 @@ public class TimeUtils {
 
         end = end.plusDays(1);
         StringBuilder sb = new StringBuilder();
-        Period p = Period.between(start, end);
-        if (p.getYears() > 0) {
-            sb.append(p.getYears()).append("年");
-        }
-        if (p.getMonths() > 0) {
-            sb.append(p.getMonths()).append("月");
-        }
-        if (p.getDays() > 0) {
-            sb.append(p.getDays()).append("天");
-        }
+        Duration p = Duration.between(start, end);
+        long day=p.toDays();
+        System.out.println(day);
         return sb.toString();
     }
-
-    public static void main(String[] args) {
-        TimeUtils.formatDuration2("2021-12-31 10:05:02","2021-12-30 12:08:04");
+@Test
+    public  void test2() {
+        System.out.println(System.currentTimeMillis()+"ggggggggggggg");
+//        TimeUtils.formatDuration2("2021-12-30 12:08:04","2021-12-31 10:05:02");
     }
 }

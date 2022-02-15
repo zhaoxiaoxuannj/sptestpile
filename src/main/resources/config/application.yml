@@ -1,5 +1,5 @@
 server:
-  port: 28090
+  port: 38090
 spring:
   mvc:
     view:
@@ -7,7 +7,8 @@ spring:
       suffix: .jsp
 custom:
   config:
-    dagentparentpath: /home/alipms/
+#    dagentparentpath: /home/alipms/
+    dagentparentpath: D:\\home\\alipms
 
     cmd3path: /home/alipms/cmdsh3
   logging:

@@ -8,7 +8,7 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <title>datd测试桩页面</title>
+    <title>DATD测试桩页面</title>
     <link rel="shortcut icon" href="/static/img/favicon.ico" type="image/x-icon" />
     <link rel="stylesheet" type="text/css" href="/static/script/lib/element-ui-2.13.2/theme-chalk/index.css">
     <link rel="stylesheet" type="text/css" href="/static/css/custom.css">
@@ -117,8 +117,8 @@
            <el-col :span="12">
                <div class="add-file-right" style="height:70px;margin-left:100px;margin-top:15px;">
                    <div class="add-file-right-img" style="margin-left:70px;">上传文件：</div>
-                   <input type="file" ref="clearFile" @change="getFile($event)" multiple="multiplt" class="add-file-right-input" style="margin-left:70px;" accept=".ter">
-                   <span class="add-file-right-more">支持扩展名：.ter </span>
+                   <input type="file" ref="clearFile" @change="getFile($event)" multiple="multiplt" class="add-file-right-input" style="margin-left:70px;" accept=".txt">
+                   <span class="add-file-right-more">支持扩展名：.txt </span>
                </div>
                <div class="add-file-list">
                    <ul>
@@ -149,7 +149,7 @@ var app=new Vue({
         return {
         fileList:[],
         addFileName:"",
-        showflag:"single",
+        showflag:"batch",
         configflag:"detect",
         detectresult:"",
         clientform:{
@@ -239,7 +239,7 @@ var app=new Vue({
                if (idx != -1){
                    var ext = imgName.substr(idx+1).toUpperCase();
                    ext = ext.toLowerCase( );
-                   if (ext!='ter'){
+                   if (ext!='txt'){
 
                    }else{
                        this.fileList.push(file[i]);

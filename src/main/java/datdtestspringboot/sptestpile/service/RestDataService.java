@@ -43,7 +43,7 @@ public class RestDataService {
 			{
 				return "进程已存在,无需重启";
 			}
-			String[]cmdargs={dagentrealpath+"agent",rentid,serverip,serverport,dagentrealpath+"client.pem"," &"};
+			String[]cmdargs={"nohup",dagentrealpath+"agent",rentid,serverip,serverport,dagentrealpath+"client.pem"," &"};
 			String inputcmdargs=String.join(" ",cmdargs);
 			String execResult= CommonUtil.execRuntime(inputcmdargs);
 			if(execResult.toString().contains("fail"))
@@ -154,7 +154,7 @@ public class RestDataService {
 		{
 			filepath=filepath+"/";
 		}
-		filepath=filepath+"output/";
+//		filepath=filepath+"output/";
 		File parentFile=new File(filepath);
 		parentFile.deleteOnExit();
 		parentFile.mkdirs();
@@ -167,21 +167,23 @@ public class RestDataService {
 			File dest = new File(filepath + fileName);
 			try {
 				file.transferTo(dest);
+				dest.renameTo(new File(filepath+fileName.replace(".txt",".ter")));
 				logger.info("第" + (i + 1) + "个文件上传成功");
 			} catch (IOException e) {
 				logger.error(e.toString(), e);
 				logger.error("上传第" + (i++) + "个文件失败");
 			}
 		}
-		String detectinfo="detect batch "+filepath;
-		try {
-			String resultinfo = CommonUtil.executeCmdBackString(cmd3path, "0.0.0.0", "15100","2", detectinfo);
-			return resultinfo;
-		}catch (Exception e)
-		{
-			logger.error(e.getMessage());
-			return "检测失败";
-		}
+//		String detectinfo="detect batch "+filepath;
+////		try {
+////			String resultinfo = CommonUtil.executeCmdBackString(cmd3path, "0.0.0.0", "15100","2", detectinfo);
+////			return resultinfo;
+////		}catch (Exception e)
+////		{
+////			logger.error(e.getMessage());
+////			return "检测失败";
+////		}
+		return "上报成功";
 	}
 	private String processDetectResultInfo(String originalInfo){
          String resultInfo=originalInfo;

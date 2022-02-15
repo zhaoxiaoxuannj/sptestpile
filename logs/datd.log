@@ -1,15 +1,21 @@
-2021-10-11 14:16:57.304 [main] INFO  d.s.SptestpileApplicationTests - Starting SptestpileApplicationTests using Java 1.8.0_121 on nj-zhaoxiaoxuan with PID 18612 (started by Zxx in D:\20210510security\code\sptestpile)
-2021-10-11 14:16:57.310 [main] INFO  d.s.SptestpileApplicationTests - No active profile set, falling back to default profiles: default
-2021-10-11 14:17:00.197 [main] INFO  o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
-2021-10-11 14:17:00.854 [main] INFO  d.s.SptestpileApplicationTests - Started SptestpileApplicationTests in 4.531 seconds (JVM running for 6.557)
-2021-10-11 14:17:01.606 [SpringContextShutdownHook] INFO  o.s.s.c.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
-2021-10-11 14:27:07.087 [main] INFO  d.s.SptestpileApplicationTests - Starting SptestpileApplicationTests using Java 1.8.0_121 on nj-zhaoxiaoxuan with PID 19440 (started by Zxx in D:\20210510security\code\sptestpile)
-2021-10-11 14:27:07.096 [main] INFO  d.s.SptestpileApplicationTests - No active profile set, falling back to default profiles: default
-2021-10-11 14:27:09.694 [main] INFO  o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
-2021-10-11 14:27:10.252 [main] INFO  d.s.SptestpileApplicationTests - Started SptestpileApplicationTests in 3.922 seconds (JVM running for 5.868)
-2021-10-11 14:27:10.853 [SpringContextShutdownHook] INFO  o.s.s.c.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
-2021-10-11 16:05:20.328 [main] INFO  d.s.SptestpileApplicationTests - Starting SptestpileApplicationTests using Java 1.8.0_121 on nj-zhaoxiaoxuan with PID 20292 (started by Zxx in D:\20210510security\code\sptestpile)
-2021-10-11 16:05:20.395 [main] INFO  d.s.SptestpileApplicationTests - No active profile set, falling back to default profiles: default
-2021-10-11 16:05:22.953 [main] INFO  o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
-2021-10-11 16:05:23.551 [main] INFO  d.s.SptestpileApplicationTests - Started SptestpileApplicationTests in 4.214 seconds (JVM running for 6.632)
-2021-10-11 16:05:24.338 [SpringContextShutdownHook] INFO  o.s.s.c.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+2022-01-13 16:49:43.620 [main] INFO  d.sptestpile.SptestpileApplication - Starting SptestpileApplication using Java 1.8.0_121 on nj-zhaoxiaoxuan with PID 31164 (D:\20210510security\code\sptestpile\target\classes started by Zxx in D:\20210510security\code\sptestpile)
+2022-01-13 16:49:43.694 [main] INFO  d.sptestpile.SptestpileApplication - No active profile set, falling back to default profiles: default
+2022-01-13 16:49:45.697 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 38090 (http)
+2022-01-13 16:49:45.713 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-38090"]
+2022-01-13 16:49:45.714 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2022-01-13 16:49:45.715 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.39]
+2022-01-13 16:49:46.565 [main] INFO  org.apache.jasper.servlet.TldScanner - At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2022-01-13 16:49:46.574 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2022-01-13 16:49:46.574 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2750 ms
+2022-01-13 16:49:46.921 [main] INFO  o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2022-01-13 16:49:47.208 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-38090"]
+2022-01-13 16:49:47.266 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 38090 (http) with context path ''
+2022-01-13 16:49:47.283 [main] INFO  d.sptestpile.SptestpileApplication - Started SptestpileApplication in 5.761 seconds (JVM running for 12.083)
+2022-01-13 16:50:31.623 [http-nio-38090-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-01-13 16:50:31.623 [http-nio-38090-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2022-01-13 16:50:31.624 [http-nio-38090-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2022-01-13 16:52:53.110 [main] INFO  d.s.SptestpileApplicationTests - Starting SptestpileApplicationTests using Java 1.8.0_121 on nj-zhaoxiaoxuan with PID 140780 (started by Zxx in D:\20210510security\code\sptestpile)
+2022-01-13 16:52:53.118 [main] INFO  d.s.SptestpileApplicationTests - No active profile set, falling back to default profiles: default
+2022-01-13 16:52:58.639 [main] INFO  o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2022-01-13 16:53:00.114 [main] INFO  d.s.SptestpileApplicationTests - Started SptestpileApplicationTests in 8.818 seconds (JVM running for 12.8)
+2022-01-13 16:53:01.436 [SpringContextShutdownHook] INFO  o.s.s.c.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
